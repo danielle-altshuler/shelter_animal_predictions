@@ -1,0 +1,70 @@
+## Using Decision Tree Learning as an Interpretable Model for Predicting Candidate Guide Dog Success (Cleghern, Gruen, Roberts)
+
+This paper discusses the benefit of using a decision tree to predict whether or not candidate guide dogs will be successful guide dogs. This paper will be useful to us because it describes how they approached building the decision tree classifier: which model they chose, which parameters they tuned.  It also discusses the interpretability benefit of using a decision tree versus other possible approaches.
+
+## Storms Prediction: Logistic Regression vs. Random Forest for Unbalanced Data
+
+This paper discusses the relative merits of using a logistic regression or a random forest classifier to predict storms from an inherently unbalanced data set.  While their data set has only two possible outcomes (convective and nonconvective systems), and ours has several, this paper is still relevant.  From this paper we can learn which model to use, and which parameters to tune.  Also, in this paper they discuss two performance scores that may work even better than ROC curves for highly unbalanced data: false alarm rate (FAR) and threat score (TS).  
+
+## Random Forests (Leo Breiman)
+
+This paper describes the random forest procedure and its benefits over a single decision tree classifier.  Especially for applications when there are a large number of features, but not all observations have all of the features, random forests win out over individual decision trees.
+
+## From vital signs to clinical outcomes for patients with sepsis: a machine learning basis for a clinical decision support system 
+
+This paper discusses the use of machine learning approaches to providing a clinical decision support system.  It parallels our problem because we are trying to understand the outcomes of the pets in the shelters, and the authors of this paper are trying to understand the outcomes of patients.  In each case we have certain data about the subjects in question.  In this case, they use bayesian networks, support vector machines, gaussian mixture models, and hidden Markov models.  I am not sure we will use any of these, but I would like to have at least a single example of each.’
+
+## Classification and Regression by randomForest (Andy Liaw and Mathew Wiener)
+
+This paper describes the differences between boosting and bagging in decision trees. The main difference that the paper calls out is that in boosting successive trees depend on earlier trees, and in bagging, they do not. Then the paper introduces random forests and describes its algorithm in great detail. One key finding was that while variable importance varies within each tree, order of importance usually does not.
+
+## Decision tree methods: applications for classification and prediction (Yan-yan Song and Ying Lu)
+
+This paper highlights the basics of decision trees and provides a helpful overview. The paper defines nodes, branches, and splitting and then goes on to talk about stopping criteria with regards to the balance between decision tree complexity and goodness of fit. One thing the paper mentioned variable relevant to our dataset was the ability to handle heavily skewed data without transformations. Our outcome variables are quite skewed within our training dataset and we want to make sure not to assume this distribution in our test dataset.
+
+## Factors Informing Outcomes for Older Cats and Dogs in Animal Shelters (Hates, Kerrigan, Morris)
+
+As all data science projects are part art and a part science, we felt that it was necessary to read about other studies similar to our own for a more complete context around the subject matter. The main finding was that the condition of intake and reason for intake (i.e. age, disease, behavior etc.) informed outcome most with regards to euthanasia, adoption, or other living outcomes. A logistic regression model was run here evaluating outcome against intake condition and treatment plan at the shelter.
+
+## A Review on Ensembles for the Class Imbalance Problem: Bagging-, Boosting-, and Hybrid-Based Approaches (Galar, et al)
+
+This paper talks about what to do with imbalanced data. It started off with stating that we can modify the data, use algorithms to mitigate bias towards the majority, or a combination approach. The paper then talks about ensemble learning, which is a hybrid of bagging, boosting, and random forests. The main goal of ensemble learning is to combine several classifiers to create something new that outperforms each one individually. We can definitely try some approach similar to this one for our dataset.
+
+## Machine Learning, Linear and Bayesian Models for Logistic Regression in Failure Detection Problems (Pavlyshenko)
+
+This paper details a generalized linear model approach for logistic regression in trying to predict manufacturing failures. It takes a Bayesian approach to logistic regression to obtain the statistical distribution for the parameters of the model. We thought it could be a potentially valuable approach for our problem. It appears to produce good results in a probabilistic analysis (in this case, risk assessment).
+
+## Do we Need Hundreds of Classifiers to Solve Real World Classification Problems? (Delgado, Cernadas, Barro, Amorim)
+
+This is an extensive paper which assesses 179 classifiers from 17 different families. The researchers examine 121 datasets, and reach an unsurprising conclusion: different families of classifiers emerge as the most accurate classifiers for different datasets. However, in their study, the family of classifiers that was most likely to produce the best results was versions of random forest (though the difference with the second most likely family, SVM with Gaussian kernel, was not statistically significant). We considered these results as we determined our preferred solution method.
+
+## Structured Learning via Logistic Regression (Domke)
+
+The Domke paper explores logistic regression with the addition of “entropy terms”, in the form of functions. In the examined logistic regression problems, each training example has a bias term determined by the current set of messages. This structured “energy function” is then used to minimize logistic loss. This was an interesting concept, but appeared to be outside the scope of our problem.
+
+## Statistical and Machine Learning Forecasting Methods: Concerns and Ways Forward (Makridakis, Spiliotis, Assimakopoulos)
+
+This paper evaluates popular machine learning methods against eight traditional statistical forecasting methods, concluding that the machine learning methods dominated in performance over the statistical methods. The machine learning methods assessed were Multi-Layer Perceptron, Bayesian Neural Network, Radial Basis Functions, Generalized Regression Neural Networks, K-Nearest Neighbor regression, CART regression trees, Support Vector Regression, and Gaussian Processes. The researchers achieved the best performances from Multi-Layer Perceptron and Bayesian Neural Network. Unfortunately, the paper did not assess random forest or logistic regression, which were the main options in the running in our assessment.
+
+## Tidy Data (Wickham)
+
+Wickham wrote this paper to provide us with tools and standards for cleaning a dataset. The paper defines “tidy data” as having three characteristics:  Each variable forms a column, each observation forms a row, and each type of observational unit forms a table. It then walks through some methods in R for processing a dataset so that it qualifies as tidy. The methods are extremely useful in a general sense. However, our data were abnormally clean, and we did not need to implement these approaches.
+
+
+
+
+References
+
+“Assessment-of-Storefront-Displays-with-a-Multidisciplinary-Approach-Based-on-Neuromarketing-and-Antropological-Marketing.Pdf.” Accessed November 11, 2018. https://www.researchgate.net/profile/Maurizio_Mauri3/publication/328163427_Assessment_of_Storefront_Displays_with_a_Multidisciplinary_Approach_based_on_Neuromarketing_and_Antropological_Marketing/links/5bbc74a4a6fdcc9552dcb5e1/Assessment-of-Storefront-Displays-with-a-Multidisciplinary-Approach-based-on-Neuromarketing-and-Antropological-Marketing.pdf#page=259.
+Domke, Justin. “Structured Learning via Logistic Regression.” ArXiv:1407.0754 [Cs, Stat], July 2, 2014. http://arxiv.org/abs/1407.0754.
+Fernandez-Delgado, Manuel, Eva Cernadas, Senen Barro, and Dinani Amorim. “Do We Need Hundreds of Classiﬁers to Solve Real World Classiﬁcation Problems?,” n.d., 49.
+Galar, M., A. Fernandez, E. Barrenechea, H. Bustince, and F. Herrera. “A Review on Ensembles for the Class Imbalance Problem: Bagging-, Boosting-, and Hybrid-Based Approaches.” IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews) 42, no. 4 (July 2012): 463–84. https://doi.org/10.1109/TSMCC.2011.2161285.
+Gultepe, Eren, Jeffrey P. Green, Hien Nguyen, Jason Adams, Timothy Albertson, and Ilias Tagkopoulos. “From Vital Signs to Clinical Outcomes for Patients with Sepsis: A Machine Learning Basis for a Clinical Decision Support System.” Journal of the American Medical Informatics Association: JAMIA 21, no. 2 (April 2014): 315–25. https://doi.org/10.1136/amiajnl-2013-001815.
+Hawes, Sloane, Josephine Kerrigan, and Kevin Morris. “Factors Informing Outcomes for Older Cats and Dogs in Animal Shelters.” Animals 8, no. 3 (March 7, 2018): 36. https://doi.org/10.3390/ani8030036.
+Liaw, Andy, and Matthew Wiener. “Classification and Regression by RandomForest.” Forest 23 (November 30, 2001).
+Makridakis, Spyros, Evangelos Spiliotis, and Vassilios Assimakopoulos. “Statistical and Machine Learning Forecasting Methods: Concerns and Ways Forward.” PLOS ONE 13, no. 3 (March 27, 2018): e0194889. https://doi.org/10.1371/journal.pone.0194889.
+Pavlyshenko, B. “Machine Learning, Linear and Bayesian Models for Logistic Regression in Failure Detection Problems.” In 2016 IEEE International Conference on Big Data (Big Data), 2046–50, 2016. https://doi.org/10.1109/BigData.2016.7840828.
+“Randomforest2001.Pdf.” Accessed November 11, 2018. https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf.
+Ruiz, Anne, and Nathalie Villa. “Storms Prediction : Logistic Regression vs Random Forest for Unbalanced Data.” ArXiv:0804.0650 [Math, Stat], April 4, 2008. http://arxiv.org/abs/0804.0650.
+SONG, Yan-yan, and Ying LU. “Decision Tree Methods: Applications for Classification and Prediction.” Shanghai Archives of Psychiatry 27, no. 2 (April 25, 2015): 130–35. https://doi.org/10.11919/j.issn.1002-0829.215044.
+“Tidy Data | Wickham | Journal of Statistical Software.” Accessed November 11, 2018. https://doi.org/10.18637/jss.v059.i10.
